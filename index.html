@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>VTT DA GRAZI</title>
+    </head>
+    <body>
+        <div id="gamearea">
+            <img id="player" src="assets/personagens/mestre.png" alt="Personagem mestre">
+        </div>
+        <button id="btn-inventario" onclick="abrirInventario()"></button>
+        <div id="inventario-mestre">
+            <menu id="menu-invent">
+                <p id="p-invent"> Inventário</p>
+                <button class="abas-invent" onclick="formAdicionar()">+</button>
+                <form id="form-modif-invent">
+                    <p id="ttl-form">Adicionar Item</p>
+                    <ul id="lista-infos">
+                        <li class="itens-form">
+                            <label for="addNome">Nome:</label>
+                            <input type="text" name="addNome" id="addNome" class="form-in">
+                        </li>
+                        <li class="itens-form">
+                            <label for="addCategoria">Categoria:</label>
+                            <input type="text" name="addCategoria" id="addCategoria" class="form-in">
+                        </li>
+                        <li class="itens-form">
+                            <label for="addImg">Imagem:</label>
+                            <input type="file" name="addImg" id="addImg" class="form-in">
+                        </li>
+                        <button id="btnAdicionar" class="abas-invent">Add</button>
+                    </ul>
+                </form>
+                <button class="abas-invent" onclick="abaTodos()">todos</button>
+                <button class="abas-invent" onclick="abaConsumiveis()">consumíveis</button>
+                <button class="abas-invent" onclick="abaObjetos()">objetos</button>
+                <button class="abas-invent" onclick="abaPersonagens()">personagens</button>
+            </menu>
+            <div id="caixa-slots"></div>
+        </div>
+        <div id="mesa_dado">
+            <p id="tt">Role!</p>
+            <div id="dado">
+                <div class="bolas" id="b1"></div>
+                <div class="bolas" id="b2"></div>
+                <div class="bolas" id="b3"></div>
+                <div class="bolas" id="b4"></div>
+                <div class="bolas" id="b5"></div>
+                <div class="bolas" id="b6"></div>
+                <div class="bolas" id="b7"></div>
+            </div>
+            <button id="btn_rolagem" onclick="rolarDados()">
+                <p>rolar</p>
+            </button>
+        </div>
+        <button id="btn-notas" onclick="abrirNotas()">
+        </button>
+        <div id="aba-notas">
+            <div id="caderno-notas">
+                <textarea spellcheck="false" class="paginas" name="pagina1" id="pagina1" maxlength="680"></textarea>
+            </div>
+        </div>
+
+    <script src="script.js"></script>
+    </body>
+</html>

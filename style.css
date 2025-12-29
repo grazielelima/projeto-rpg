@@ -1,0 +1,348 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    width: 100%;
+    height: auto;
+    padding-top: 60px;
+    background-color: #000000;
+}
+
+#btn-inventario {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 0px 2px 8px 0px;
+    background-color: #ffffffd5;
+    background-image: url(assets/icons-texturas/icon-inventario-mestre-fechado.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: fixed;
+    top: 0px;
+}
+
+#inventario-mestre {
+    background-color: #d75553e5;
+    width: 400px;
+    height: 92vh;
+    padding: 10px;
+    position: fixed;
+    z-index: 3;
+    transform: translateX(-100%);
+    transition: transform .2s ease-in;
+    top: 50px;
+    overflow-y: auto;
+}
+
+#inventario-mestre::-webkit-scrollbar {
+    width: 5px;
+}
+
+#inventario-mestre::-webkit-scrollbar-track {
+    background: #271405;
+}
+#inventario-mestre::-webkit-scrollbar-thumb {
+    background: #ffffff46;
+    border-radius: 10px;
+}
+#inventario-mestre::-webkit-scrollbar-track:hover {
+    background: #360e4b;
+}
+
+#menu-invent {
+    width: 100%;
+    height: auto;
+    background-color: #75112f;
+    margin-bottom: 10px;
+    border-top: 2px solid #0000007b;
+    border-left: 2px solid #0000007b;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+#p-invent {
+    background-size: contein;
+    background-repeat: no-repeat;
+    padding: 10px;
+    color:#dbdbdb;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px #424242;
+}
+
+.abas-invent {
+    background-color: #F88774;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    border-top: 2px solid #0000007b;
+    border-left: 2px solid #0000007b;
+    border-right: 2px solid #0000007b;
+    border-bottom: 2px solid #0000007b;
+    box-sizing: border-box;
+}
+
+.abas-ivent:hover {
+    background-color: #c42958;
+    border-top: 2px solid #0000007b;
+    border-left: 2px solid #0000007b;
+    border-right: 2px solid #0000007b;
+    border-bottom: 2px solid #0000007b;
+}
+
+#caixa-slots {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    gap: 5px;
+}
+
+.slots-inventario {
+    width: 70px;
+    height: 70px;
+    background-color: #F88774;
+    position: relative;
+    border-left: 1px solid #c42958;
+    border-top: 1px solid #c42958;
+    box-shadow: 2px 2px 0px #75112f;
+}
+
+.detalhe {
+    width: 100%;
+    height: 100%;
+    background-color: #A11D45;
+    border-left: 1px solid #ffffff92;
+    position: absolute;
+    border-radius: 100px 0px 0px 0px;
+}
+
+.item {
+    background-repeat: no-repeat;
+    width: 90%;
+    height: 90%;
+    background-size: contain;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+}
+
+#form-modif-invent {
+    width: 300px;
+    height: auto;
+    color: white;
+    padding: 10px;
+    background-color: #eb678fc4;
+    border-radius: 0px 10px 10px 0px;
+    box-shadow: 2px 2px 5px#00000050;
+    display: none;
+    position: absolute;
+    z-index: 4;
+}
+
+#ttl-form {
+    text-align: center;
+    font-weight: bold;
+    padding: 5px;
+}
+
+#lista-infos {
+    display: block;
+    width: 100%;
+    margin: auto;
+    text-align: left;
+}
+
+.form-in {
+    width: 100%;
+}
+.itens-form {
+    list-style-type: none;
+    margin: auto;
+    margin-top: 10px;
+    width: 90%;
+    height: 99%;
+}
+#btnAdicionar {
+    display: block;
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+#gamearea {
+    background-color: #111;
+    background-image: url(assets/cenarios/cenario1.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    max-width: 900px;
+    height: 500px;
+    overflow: hidden;
+    border: 3px solid rgb(24, 24, 24);
+    position: relative;
+    margin: auto;
+}
+
+#cenario1 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+#player {
+    position: absolute;
+    width: 128px;
+    height: auto;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+#btn-notas {
+    background-color: #FFEABD;
+    background-image: url(assets/icons-texturas/icon-livrofcd.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 1px solid gray;
+    border-radius: 5px 0px 0px 5px;
+    width: 40px;
+    height: 50px;
+    margin: auto;
+    position: fixed;
+    right: 0%;
+    top: 40%;
+    z-index: 3;
+    transition: transform .1s ease-in;
+}
+
+#aba-notas {
+    background-color: #FFEABD;
+    background-image: url(assets/icons-texturas/aba-livro-vermelho.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 350px;
+    height: 550px;
+    border-radius: 5px;
+    position: fixed;
+    top: 50px;
+    right: 0%;
+    z-index: 2;
+    transform: translateX(+100%);
+    transition: transform .1s ease-in;
+}
+
+#caderno-notas {
+    background-color: #6a347800;
+    width: 90%;
+    height: 94%;
+    margin: auto;
+    margin-top: 20px;
+    text-align: end;
+}
+.paginas {
+    background-color: transparent;
+    width: 90%;
+    height: 95%;
+    resize: none;
+    border: none;
+    overflow-y: hidden;
+    outline: none;
+    color: #383838;
+    caret-color: #646464;
+    font-family: cursive, Georgia, 'Times New Roman', Times, serif;
+    font-size: 15px;
+}
+
+#mesa_dado {
+    background-color: #865e34;
+    background-image: url(assets/icons-texturas/mesa_textura.jpg);
+    background-size: cover;
+    width: 100px;
+    height: auto;
+    padding: 0px 50px;
+    text-align: center;
+    position: fixed;
+    bottom: 0%;
+}
+#tt {
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+}
+#dado {
+    background-color: #d3d3d3;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    border-radius: 5%;
+    border: 5% solid #d2d2d2;
+    position: relative;
+    box-shadow: 4px 5px 10px #090909c8;
+}
+.bolas {
+    background-color: #181818;
+    width: 15%;
+    height: 15%;
+    margin: 5px;
+    border-radius: 50%;
+    border-left: 4px solid #000;
+    border-right: 4px solid #000000;
+    border-inline-color: #a7abb9;
+    position: absolute;
+}
+#b1 {
+    top: 5%;
+    left: 5%;
+}
+#b2 {
+    top: 5%;
+    right: 5%;
+}
+#b3 {
+    top: 40%;
+    left: 5%;
+}
+#b4 {
+    top: 40%;
+    right: 5%;
+}
+#b5 {
+    top: 40%;
+    right: 35%;
+    display: none;
+}
+#b6 {
+    bottom: 5%;
+    left: 5%;
+}
+#b7 {
+    bottom: 5%;
+    right: 5%;
+}
+
+#btn_rolagem {
+    padding: 10px;
+    margin: 20px;
+    background-color: #582f0d;
+    border: none;
+    border-top: 1px solid #d79e70;
+    border-left: 1px solid #d79e70;
+    border-right: 1px solid #402209;
+    border-bottom: 1px solid #402209;
+    color: #fff;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+#btn_rolagem:hover {
+    background-color: #4b2b10;
+    border-top: 1px solid #a8774f;
+    border-left: 1px solid #a8774f;
+    border-right: 1px solid #402209;
+    border-bottom: 1px solid #402209;
+}
